@@ -1,0 +1,24 @@
+# example use for select use cases of pyBinance
+
+# DISCLAIMERS
+- There is little/no error checking in these scripts, so invalid inputs result in proper error handling in Binance.py
+	but some ugliness on a per script level. 
+
+# CONFIGURE
+- Settings in config.ini for secret and apikey are required for Binance API security type = Signed.  You can get these
+	from Binance. The current values in the file are dummy values and will result in key errors.  
+		NOTE: DO NOT use any quotes, parenthesis, etc. Just put the key right next to the = sign.
+- Settings in logging.ini are appropriate but can be adjusted as desired. File binance.log will 
+	collect INFO and only ERROR printed to stdout
+
+# SCRIPTS 
+These scripts take command line inputs, so just run it and it will ask you questions
+- example-getCurrentPrice.py:  Get current price of an asset traded on Binance (demonstrates getTicker)
+- example-showOrderBook.py:  Show order book of an asset traded on Binance (demonstrates getOrderBook)
+- example-showAllOrders.py:  Show personal order history for a given trading pair (demonstrates getAllOrders)
+- example-listMyAssets.py:  Print out a list of my current assets on Binance (demonstrates getAccountInfo)
+
+These scripts require manual configuration of queryParams because typing it in at cli is a pain
+- example-createOrder.py: Create an order (demonstrates createOrder)
+
+	

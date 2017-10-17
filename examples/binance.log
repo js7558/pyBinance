@@ -1,0 +1,3 @@
+"2017-10-12 15:42:12" : INFO: requestSender - queryParams contains {'symbol': 'ETHBTC', 'limit': 10}
+"2017-10-12 15:42:12" : INFO: requestSender - query string is symbol=ETHBTC&limit=10
+"2017-10-12 15:42:12" : INFO: requestSender - successful, returning r
