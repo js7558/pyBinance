@@ -12,7 +12,8 @@ API path exposed by Binance containing the type, value, enum, maximums, and othe
 The values passed into the API call are checked against this definition via the validateParams method for each 
 call to avoid unnecessary sending of requests.   Extensive use of python logging to help with diagnostics. 
 
-To keep things simple, most methods just take a python dictionary as their only argument. The keys in this dictionary 
+To keep things simple, most methods just take a python dictionary (I called it queryParams in most of the 
+examples and test scripts but the name doesn't matter) as their only argument. The keys in this dictionary 
 correspond to the inputs specified in the Binance API documentation (symbol, quantity, price, timestamp, etc).  
 The intent here was to make it possible to refer primarily to the Binance API documentation for specifying inputs
 for API calls.  Passing them in a dictionary makes the order they are specified in unimportant.
