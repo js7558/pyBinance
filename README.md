@@ -7,7 +7,15 @@ Python based class and utilities for using the Binance Crytpocurrency Exchange
 Implementation of the functionality for Public API and Account Endpoints described at
 https://www.binance.com/restapipub.html#user-content-public-api-endpoints
 
-Heavy emphasis on checking and validating inputs.   My approach here was to create a pandas dataframe for each API path exposed by Binance containing the type, value, enum, maximums, and other constraints for input parameters.  The values passed into the API call are checked against this definition via the validateParams method for each call to avoid unnecessary sending of requests.   Extensive use of python logging to help with diagnostics. 
+Heavy emphasis on checking and validating inputs.   My approach here was to create a pandas dataframe for each 
+API path exposed by Binance containing the type, value, enum, maximums, and other constraints for input parameters.  
+The values passed into the API call are checked against this definition via the validateParams method for each 
+call to avoid unnecessary sending of requests.   Extensive use of python logging to help with diagnostics. 
+
+To keep things simple, most methods just take a python dictionary as their only argument. The keys in this dictionary 
+correspond to the inputs specified in the Binance API documentation (symbol, quantity, price, timestamp, etc).  
+The intent here was to make it possible to refer primarily to the Binance API documentation for specifying inputs
+for API calls.  Passing them in a dictionary makes the order they are specified in unimportant.
 
 Each method is documented fairly well in Binance.py.  I also wrote documentation for each method on the wiki. 
 
